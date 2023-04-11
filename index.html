@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Quản lý sinh viên</title>
+</head>
+
+<body onload="renderListStudent()">
+    <div class="form-student">
+        <h3>Thông tin sinh viên</h3>
+        <label>Họ tên</label>
+        <input type="text" id="fullname">
+        <span id="errname" class="error"></span>
+        <br>
+
+        <label>Địa chỉ Email</label>
+        <input type="text" id="email">
+        <span id="err-email" class="error"></span>
+        <br>
+
+        <label>Số điện thoại</label>
+        <input type="text" id="phone">
+        <span id="err-phone" class="error"></span>
+        <br>
+
+        <label>Địa chỉ</label>
+        <input type="text" id="address">
+        <span id="err-address" class="error"></span>
+        <br>
+
+        <label>Giới tính</label>
+        <input type="radio" name="sex" value="1" id="nam"> Nam
+        <input type="radio" name="sex" value="2" id="nu"> Nữ
+        <span id="err-gender" class="error" style="margin-left: 120px;"></span>
+        <br>
+
+        <label> &nbsp;</label>
+        <br>
+        <button onclick="save()">Lưu</button>
+    </div>
+
+    <div class="list-student" id='list-student'>
+        <h3>Danh sách sinh viên</h3>
+        <table id="grid-student" class="table-grid">
+        </table>
+    </div>
+
+    <script src="student.js"></script>
+</body>
+
+</html>
